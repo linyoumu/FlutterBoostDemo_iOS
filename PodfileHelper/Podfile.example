@@ -1,0 +1,46 @@
+# ==============================================================================
+# Podfile 示例 - 使用 SimulatorArchConfig 助手
+# ==============================================================================
+
+# 1️⃣ 加载配置助手
+load 'PodfileHelper/simulator_arch_config.rb'
+
+# 2️⃣ 基本配置
+platform :ios, '13.0'
+
+# 3️⃣ 如果是 Flutter 混合项目，添加这些行
+# flutter_application_path = '../flutter_module'
+# load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+
+# 4️⃣ 定义目标
+target 'YourAppName' do
+  use_frameworks!
+  
+  # Flutter 项目: 取消下面这行的注释
+  # install_all_flutter_pods(flutter_application_path)
+  
+  # 你的其他 Pods
+  # pod 'Alamofire'
+  # pod 'SnapKit'
+end
+
+# 5️⃣ 安装后配置
+post_install do |installer|
+  
+  # Flutter 项目: 取消下面这行的注释
+  # flutter_post_install(installer)
+  
+  # ========================================
+  # 【架构配置】
+  # ========================================
+  
+  # 方式 1: 使用默认配置（推荐 - Native 模式）
+  SimulatorArchConfig.apply(installer)
+  
+  # 方式 2: 自定义配置
+  # config = SimulatorArchConfig::Config.new
+  # config.mode = :native                    # 或 :rosetta
+  # config.enable_logging = true             # 是否显示日志
+  # config.fix_third_party_plugins = true    # 是否自动修复第三方插件
+  # SimulatorArchConfig.apply(installer, config)
+end

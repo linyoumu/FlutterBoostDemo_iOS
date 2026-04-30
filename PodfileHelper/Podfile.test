@@ -1,0 +1,45 @@
+# ==============================================================================
+# 测试配置 - 验证 SimulatorArchConfig 是否正常工作
+# ==============================================================================
+
+load 'simulator_arch_config.rb'
+
+platform :ios, '13.0'
+
+target 'TestApp' do
+  use_frameworks!
+end
+
+post_install do |installer|
+  puts "\n=========================================="
+  puts "🧪 开始测试 SimulatorArchConfig"
+  puts "==========================================\n"
+  
+  # 测试 1: Native 模式
+  puts "\n📝 测试 1: Native 模式"
+  config = SimulatorArchConfig::Config.new
+  config.mode = :native
+  config.enable_logging = true
+  config.fix_third_party_plugins = false
+  
+  SimulatorArchConfig.apply(installer, config)
+  
+  # 验证配置
+  puts "\n🔍 验证 Native 模式配置..."
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |conf|
+      excluded = conf.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]']
+      if excluded == 'i386'
+        puts "  ✅ #{target.name}: EXCLUDED_ARCHS = #{excluded}"
+      else
+        puts "  ❌ #{target.name}: EXCLUDED_ARCHS = #{excluded} (期望: i386)"
+      end
+      break
+    end
+    break if installer.pods_project.targets.count == 0
+  end
+  
+  puts "\n" + "="*50
+  puts "✅ 测试完成"
+  puts "="*50 + "\n"
+end

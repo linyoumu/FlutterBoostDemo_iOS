@@ -2,13 +2,17 @@ PODS:
   - Flutter (1.0.0)
   - flutter_boost (0.0.2):
     - Flutter
+  - flutter_plugin_test (0.0.1):
+    - Flutter
   - FlutterPluginRegistrant (0.0.1):
     - Flutter
     - flutter_boost
+    - flutter_plugin_test
 
 DEPENDENCIES:
   - Flutter (from `../flutter_module/.ios/Flutter`)
   - flutter_boost (from `../flutter_module/.ios/.symlinks/plugins/flutter_boost/ios`)
+  - flutter_plugin_test (from `../flutter_module/.ios/.symlinks/plugins/flutter_plugin_test/ios`)
   - FlutterPluginRegistrant (from `../flutter_module/.ios/Flutter/FlutterPluginRegistrant`)
 
 EXTERNAL SOURCES:
@@ -16,14 +20,17 @@ EXTERNAL SOURCES:
     :path: "../flutter_module/.ios/Flutter"
   flutter_boost:
     :path: "../flutter_module/.ios/.symlinks/plugins/flutter_boost/ios"
+  flutter_plugin_test:
+    :path: "../flutter_module/.ios/.symlinks/plugins/flutter_plugin_test/ios"
   FlutterPluginRegistrant:
     :path: "../flutter_module/.ios/Flutter/FlutterPluginRegistrant"
 
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   flutter_boost: 35d7aaeeba2a591a34841e776e2f76912efc85f1
-  FlutterPluginRegistrant: 394226c6f517efccb49c56b9863149ee302708c3
+  flutter_plugin_test: ac7a2b46d538ee485537a097f8449147b5406aa4
+  FlutterPluginRegistrant: 281bb61f4bbe8bb672518edacd4cc4f54dbb37b8
 
-PODFILE CHECKSUM: 8efd4b6942e7e5af3dc11a83746533ab10405166
+PODFILE CHECKSUM: 5115bb901a221002d18b9ca29197804b9557d493
 
 COCOAPODS: 1.16.2
