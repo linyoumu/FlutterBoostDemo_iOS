@@ -73,7 +73,7 @@ class ViewController: UIViewController {
         
         
         FlutterBoost.instance().open(
-            "second",
+            "flutter://second",
             arguments: [
                 "from": "NativeMainPage",
                 "message": "Hello from Native!",

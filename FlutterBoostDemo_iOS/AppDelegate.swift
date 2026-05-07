@@ -7,6 +7,7 @@
 
 import UIKit
 import flutter_boost
+import FlutterPluginRegistrant
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+
+        let flutterEngine = FlutterEngine(name: "FlutterBoostPlugin")
+        flutterEngine.run()
+        GeneratedPluginRegistrant.register(with: flutterEngine)
+        
         
         //创建代理，做初始化操作
         let delegate = BoostDelegate()
