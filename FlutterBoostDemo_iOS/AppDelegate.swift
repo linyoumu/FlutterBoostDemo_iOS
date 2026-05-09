@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
 
-        let flutterEngine = FlutterEngine(name: "FlutterBoostPlugin")
-        flutterEngine.run()
-        GeneratedPluginRegistrant.register(with: flutterEngine)
+//        let flutterEngine = FlutterEngine(name: "FlutterBoostPlugin")
+//        flutterEngine.run()
+//        GeneratedPluginRegistrant.register(with: flutterEngine)
         
         
         //创建代理，做初始化操作

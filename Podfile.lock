@@ -1,22 +1,40 @@
 PODS:
-  - AllSDK (1.0.0)
+  - FlutterAppSDK (1.0.0)
+  - FlutterPluginsSDK (1.0.0)
+  - FlutterSDK (1.0.0)
 
 DEPENDENCIES:
-  - "AllSDK (from `git@github.com:linyoumu/RemoteXCFrameworks.git`, tag `1.0.0`)"
+  - "FlutterAppSDK (from `git@github.com:linyoumu/RemoteFlutterAppXCFrameworks.git`, tag `1.0.0`)"
+  - "FlutterPluginsSDK (from `git@github.com:linyoumu/RemoteFlutterPluginXCFrameworks.git`, tag `1.0.0`)"
+  - "FlutterSDK (from `git@github.com:linyoumu/RemoteFlutterXCFrameworks.git`, tag `1.0.0`)"
 
 EXTERNAL SOURCES:
-  AllSDK:
-    :git: "git@github.com:linyoumu/RemoteXCFrameworks.git"
+  FlutterAppSDK:
+    :git: "git@github.com:linyoumu/RemoteFlutterAppXCFrameworks.git"
+    :tag: 1.0.0
+  FlutterPluginsSDK:
+    :git: "git@github.com:linyoumu/RemoteFlutterPluginXCFrameworks.git"
+    :tag: 1.0.0
+  FlutterSDK:
+    :git: "git@github.com:linyoumu/RemoteFlutterXCFrameworks.git"
     :tag: 1.0.0
 
 CHECKOUT OPTIONS:
-  AllSDK:
-    :git: "git@github.com:linyoumu/RemoteXCFrameworks.git"
+  FlutterAppSDK:
+    :git: "git@github.com:linyoumu/RemoteFlutterAppXCFrameworks.git"
+    :tag: 1.0.0
+  FlutterPluginsSDK:
+    :git: "git@github.com:linyoumu/RemoteFlutterPluginXCFrameworks.git"
+    :tag: 1.0.0
+  FlutterSDK:
+    :git: "git@github.com:linyoumu/RemoteFlutterXCFrameworks.git"
     :tag: 1.0.0
 
 SPEC CHECKSUMS:
-  AllSDK: 3cfdbe1c99c6391235d7d95087b675a214f5316c
+  FlutterAppSDK: 29b0dfe4853a7e03568aa05ec01e9ff8e06cc35e
+  FlutterPluginsSDK: 9c4b440fbce6dd6fb33b33b974025818e70dde42
+  FlutterSDK: 2ab204bf2388107653abb36a2fc986c78fd51a7e
 
-PODFILE CHECKSUM: 90ae050f1e7cf1a5707ed6b985e3ab1f879395f2
+PODFILE CHECKSUM: 39b5e2c1f61a4568206addc5d3a6b214c13fcac1
 
 COCOAPODS: 1.16.2

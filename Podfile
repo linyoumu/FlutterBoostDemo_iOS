@@ -8,8 +8,20 @@ target 'FlutterBoostDemo_iOS' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'AllSDK', :git => 'git@github.com:linyoumu/RemoteXCFrameworks.git', :tag => '1.0.0'
+  pod 'FlutterSDK', :git => 'git@github.com:linyoumu/RemoteFlutterXCFrameworks.git', :tag => '1.0.0'
+
+  pod 'FlutterAppSDK', :git => 'git@github.com:linyoumu/RemoteFlutterAppXCFrameworks.git', :tag => '1.0.0'
+
+  pod 'FlutterPluginsSDK', :git => 'git@github.com:linyoumu/RemoteFlutterPluginXCFrameworks.git', :tag => '1.0.0'
+
+#  pod 'FlutterSDK',:path => '../RemoteFlutterXCFrameworks'
+#  pod 'FlutterAppSDK',:path => '../RemoteFlutterAppXCFrameworks'
+#  pod 'FlutterPluginsSDK',:path => '../RemoteFlutterPluginXCFrameworks'
+  
+# 所有的flutter模块产物的xcframework
+#  pod 'AllSDK', :git => 'git@github.com:linyoumu/RemoteXCFrameworks.git', :tag => '1.0.0'
 #  pod 'AllSDK',:path => '../RemoteXCFrameworks'
+
   # Pods for FlutterBoostDemo_iOS
 #  install_all_flutter_pods(flutter_application_path)
 end
